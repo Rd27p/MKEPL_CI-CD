@@ -12,7 +12,7 @@
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
 
-        <sonar.organization>Rd27p</sonar.organization>
+        <sonar.organization>rd27p</sonar.organization>
         <sonar.projectKey>Rd27p_MKEPL_CI-CD</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
