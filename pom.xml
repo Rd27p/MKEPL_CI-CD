@@ -1,60 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>contohprojectmaven</groupId>
+  <artifactId>contohproject</artifactId>
+  <version>0.3.5</version>
 
-    <modelVersion>4.0.0</modelVersion>
+<dependencies>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.11</version> <!-- Or whatever JUnit you're using. -->
+	</dependency>
+</dependencies>
 
-    <groupId>contohprojectmaven</groupId>
-    <artifactId>MKEPL_CI-CD</artifactId>
-    <version>0.3.5</version>
+<distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/Rd27p/MKEPL_CI-CD</url>
+    </repository>
+  </distributionManagement>
+  
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <sonar.organization>rd27p</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+ </properties>
 
-    <properties>
-        <maven.compiler.release>17</maven.compiler.release>
-
-        <sonar.organization>rd27p</sonar.organization>
-        <sonar.projectKey>Rd27p_MKEPL_CI-CD</sonar.projectKey>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
-                <configuration>
-                    <release>17</release>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>4.0.0.4121</version>
-            </plugin>
-
-        </plugins>
-    </build>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Rd27p/MKEPL_CI-CD</url>
-        </repository>
-    </distributionManagement>
-
-</project>
+</project>  
